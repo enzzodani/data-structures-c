@@ -3,8 +3,12 @@
 
 typedef struct ListNode {
     int data;
-    struct ListNode *next;
+    ListNode *next;
 } ListNode;
+
+typedef struct root {
+  ListNode *first;
+}
 
 ListNode *createNode(int data);
 ListNode *insertFront(ListNode *head, int data);
