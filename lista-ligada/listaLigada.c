@@ -5,7 +5,7 @@ ListNode *createNode(int data) {
   ListNode *newNode = (ListNode *) malloc(sizeof(ListNode));
 
   if (newNode == NULL) {
-    printf("Allocation Memory\n");
+    puts("Allocation Memory Error (createNode)");
     return NULL;
   }
 
@@ -15,18 +15,17 @@ ListNode *createNode(int data) {
   return newNode;
 }
 
-ListNode *insertFront(ListNode *head, int data) {
+List *createList(int data) {
+  List *newList = (List *) malloc(sizeof(List));
 
+  if (newList == NULL) {
+    puts("Allocation Memory Error (createList)");
+  }
+
+  newList -> lenght = 0;
+  newList -> start = NULL;
+  newList -> end = NULL;
+
+  return newList;
 }
 
-ListNode *insertEnd(ListNode *head, int data) {
-
-}
-
-void displayList(ListNode *head) {
-
-}
-
-void freeList(ListNode *head) {
-
-}
