@@ -29,3 +29,28 @@ List *createList(int data) {
   return newList;
 }
 
+void insertStart(Node *newNode, List *list)
+{
+  if (list->length == 0) {
+    list->start = newNode;
+    list->end = newNode;
+    list->length = 1;
+  } else {
+    newNode->next = list->start;
+    list->start = newNode;
+    list->length += 1;
+  }
+}
+
+void insertEnd(Node *newNode, List *list)
+{
+  if (list->length == 0) {
+    list->start = newNode;
+    list->end = newNode;
+    list->length = 1;
+  } else {
+    list->end->next = newNode;
+    list->end = newNode;
+    list->length += 1;
+  }
+}

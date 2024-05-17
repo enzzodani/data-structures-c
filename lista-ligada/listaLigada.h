@@ -14,5 +14,7 @@ typedef struct List {
 
 ListNode *createNode(int data);
 List *createList(int data);
+void insertStart(Node *newNode, List *list);
+void insertEnd(Node *newNode, List *list);
 
 #endif
